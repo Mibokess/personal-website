@@ -17,7 +17,15 @@
 </script>
 
 <style>
-    
+    .timeline {
+
+    }    
+
+    hr.vertical {
+  width: 0px;
+  height: 100%;
+  /* or height in PX */
+}
 </style>
 
 <div class="timeline">
@@ -29,3 +37,4 @@
         {/each}
     {/each}
 </div>
+<hr width="1" size="500">

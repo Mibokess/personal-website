@@ -5,7 +5,7 @@
 
 <style>
 	:global(body) {
-		background: black;
+		background: white;
 	}
 </style>
 
