@@ -1,144 +1,31 @@
+<script>
+    let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    let events = [
+        { name: "FS 2019"},
+        { name: "HS 2019"},
+        { name: "FS 2018"},
+        { name: "HS 2018"},
+        { name: "FS 2017"},
+        { name: "HS 2017"},
+        { name: "FS 2016"},
+        { name: "HS 2016"},
+        { name: "FS 2015"},
+        { name: "HS 2015"},
+        { name: "FS 2014"},
+        { name: "HS 2014"}
+    ];
+</script>
+
 <style>
-    * {
-        box-sizing: border-box;
-    }
-
-    /* The actual timeline (the vertical ruler) */
-    .timeline {
-        position: relative;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    /* The actual timeline (the vertical ruler) */
-    .timeline::after {
-        content: '';
-        position: absolute;
-        width: 6px;
-        background-color: white;
-        top: 0;
-        bottom: 0;
-        left: 0;
-    }
-
-    /* Container around content */
-    .container {
-        padding: 10px 40px;
-        position: relative;
-        background-color: inherit;
-        width: 50%;
-    }
-
-    /* The circles on the timeline */
-    .container::after {
-        content: '';
-        position: absolute;
-        width: 25px;
-        height: 25px;
-        right: -17px;
-        background-color: black;
-        border: 4px solid white;
-        top: 15px;
-        border-radius: 50%;
-        z-index: 1;
-    }
-
-    /* Add arrows to the right container (pointing left) */
-    .right::before {
-        content: " ";
-        height: 0;
-        position: absolute;
-        top: 22px;
-        width: 0;
-        z-index: 1;
-        left: 30px;
-        border: medium solid white;
-        border-width: 10px 10px 10px 0;
-        border-color: transparent white transparent transparent;
-    }
-
-    /* Fix the circle for containers on the right side */
-    .right::after {
-        left: -16px;
-    }
-
-    /* The actual content */
-    .content {
-        padding: 20px 30px;
-        background-color: white;
-        position: relative;
-        border-radius: 6px;
-    }
-
-    /* Media queries - Responsive timeline on screens less than 600px wide */
-    @media screen and (max-width: 600px) {
-        /* Place the timelime to the left */
-        .timeline::after {
-            left: 31px;
-        }
-
-        /* Full-width containers */
-        .container {
-            width: 100%;
-            padding-left: 70px;
-            padding-right: 25px;
-        }
-
-        /* Make sure that all arrows are pointing leftwards */
-        .container::before {
-            left: 60px;
-            border: medium solid black;
-            border-width: 10px 10px 10px 0;
-            border-color: transparent black transparent transparent;
-        }
-
-        /* Make sure all circles are at the same spot */
-        .left::after, .right::after {
-            left: 15px;
-        }
-
-        /* Make all right containers behave like the left ones */
-        .right {
-            left: 0%;
-        }
-    }
+    
 </style>
 
 <div class="timeline">
-  <div class="container right">
-    <div class="content">
-      <h2>2017</h2>
-      <p>Lorem ipsum..</p>
-    </div>
-  </div>
-  <div class="container right">
-    <div class="content">
-      <h2>2016</h2>
-      <p>Lorem ipsum..</p>
-    </div>
-  </div>
-  <div class="container right">
-    <div class="content">
-      <h2>2017</h2>
-      <p>Lorem ipsum..</p>
-    </div>
-  </div>
-  <div class="container right">
-    <div class="content">
-      <h2>2016</h2>
-      <p>Lorem ipsum..</p>
-    </div>
-  </div>
-  <div class="container right">
-    <div class="content">
-      <h2>2017</h2>
-      <p>Lorem ipsum..</p>
-    </div>
-  </div>
-  <div class="container right">
-    <div class="content">
-      <h2>2016</h2>
-      <p>Lorem ipsum..</p>
-    </div>
-  </div>
+    {#each numbers as number}
+        {#each events as event}
+            <div class="container">
+                { event.name }
+            </div>
+        {/each}
+    {/each}
 </div>
