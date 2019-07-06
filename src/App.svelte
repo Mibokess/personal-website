@@ -1,11 +1,9 @@
 <script>
-	export let name;
+	import Title from './Title.svelte';
+	import Timeline from './Timeline.svelte';
 </script>
 
-<style>
-	h1 {
-		color: purple;
-	}
-</style>
+<style></style>
 
-<h1>Hello {name}!</h1>
+<Title/>
+<Timeline/>
