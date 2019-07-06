@@ -15,11 +15,10 @@
         content: '';
         position: absolute;
         width: 6px;
-        background-color: black;
+        background-color: white;
         top: 0;
         bottom: 0;
-        left: 50%;
-        margin-left: -3px;
+        left: 0;
     }
 
     /* Container around content */
@@ -37,35 +36,11 @@
         width: 25px;
         height: 25px;
         right: -17px;
-        background-color: white;
-        border: 4px solid #FF9F55;
+        background-color: black;
+        border: 4px solid white;
         top: 15px;
         border-radius: 50%;
         z-index: 1;
-    }
-
-    /* Place the container to the left */
-    .left {
-        left: 0;
-    }
-
-    /* Place the container to the right */
-    .right {
-        left: 50%;
-    }
-
-    /* Add arrows to the left container (pointing right) */
-    .left::before {
-        content: " ";
-        height: 0;
-        position: absolute;
-        top: 22px;
-        width: 0;
-        z-index: 1;
-        right: 30px;
-        border: medium solid black;
-        border-width: 10px 0 10px 10px;
-        border-color: transparent transparent transparent black;
     }
 
     /* Add arrows to the right container (pointing left) */
@@ -77,9 +52,9 @@
         width: 0;
         z-index: 1;
         left: 30px;
-        border: medium solid black;
+        border: medium solid white;
         border-width: 10px 10px 10px 0;
-        border-color: transparent black transparent transparent;
+        border-color: transparent white transparent transparent;
     }
 
     /* Fix the circle for containers on the right side */
@@ -90,7 +65,7 @@
     /* The actual content */
     .content {
         padding: 20px 30px;
-        background-color: black;
+        background-color: white;
         position: relative;
         border-radius: 6px;
     }
@@ -130,7 +105,7 @@
 </style>
 
 <div class="timeline">
-  <div class="container left">
+  <div class="container right">
     <div class="content">
       <h2>2017</h2>
       <p>Lorem ipsum..</p>
@@ -142,7 +117,7 @@
       <p>Lorem ipsum..</p>
     </div>
   </div>
-  <div class="container left">
+  <div class="container right">
     <div class="content">
       <h2>2017</h2>
       <p>Lorem ipsum..</p>
@@ -154,7 +129,7 @@
       <p>Lorem ipsum..</p>
     </div>
   </div>
-  <div class="container left">
+  <div class="container right">
     <div class="content">
       <h2>2017</h2>
       <p>Lorem ipsum..</p>

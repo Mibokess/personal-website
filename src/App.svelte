@@ -3,7 +3,11 @@
 	import Timeline from './Timeline.svelte';
 </script>
 
-<style></style>
+<style>
+	:global(body) {
+		background: black;
+	}
+</style>
 
 <Title/>
 <Timeline/>
