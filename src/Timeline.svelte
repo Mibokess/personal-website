@@ -1,31 +1,74 @@
 <script>
     let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
     let events = [
-        { name: "FS 2019"},
-        { name: "HS 2019"},
-        { name: "FS 2018"},
-        { name: "HS 2018"},
-        { name: "FS 2017"},
-        { name: "HS 2017"},
-        { name: "FS 2016"},
-        { name: "HS 2016"},
-        { name: "FS 2015"},
-        { name: "HS 2015"},
-        { name: "FS 2014"},
-        { name: "HS 2014"}
+        { name: "Some data"},
+        { name: "Some data"},
+        { name: "Some data"},
+        { name: "Some data"},
+        { name: "Some data"},
+        { name: "Some data"},
+        { name: "Some data"},
+        { name: "Some data"},
+        { name: "Some data"},
+        { name: "Some data"},
+        { name: "Some data"},
+        { name: "Some data"},
+        { name: "Some data"},
+        { name: "Some data"},
+        { name: "Some data"},
+        { name: "Some data"},
+        { name: "Some data"},
+        { name: "Some data"},
+        { name: "Some data"},
+        { name: "Some data"},
+        { name: "Some data"},
+        { name: "Some data"},
+        { name: "Some data"},
+        { name: "Some data"},
+        { name: "Some data"},
+        { name: "Some data"},
+        { name: "Some data"},
+        { name: "Some data"},
+        { name: "Some data"},
+        { name: "Some data"},
+        { name: "Some data"},
+        { name: "Some data"},
+        { name: "Some data"}
     ];
 </script>
 
 <style>
     
+
+    #timeline {
+        position: relative;
+        list-style: none;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        top: 0;
+        bottom: 0;
+    }
+
+    #timeline li {
+        opacity: 1;
+        position: relative;
+        margin: 20px 0 20px 0;
+        width: 330px;
+        height: 70px;
+        background-color: black;
+        padding: 15px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        list-style-type: none;
+        color: white;
+        font-size: 15px;
+        left: 30%;
+    }
 </style>
 
-<div class="timeline">
-    {#each numbers as number}
-        {#each events as event}
-            <div class="container">
-                { event.name }
-            </div>
-        {/each}
+<ul id="timeline">
+    {#each events as event}
+        <li class="timeline_entry">{ event.name }</li>
     {/each}
-</div>
+</ul>
