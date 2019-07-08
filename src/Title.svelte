@@ -1,11 +1,9 @@
 <script>
 </script>
 
-<svelte:head>
-	<link href="https://fonts.googleapis.com/css?family=Fira+Mono&display=swap" rel="stylesheet">
-</svelte:head>
-
 <style></style>
 
-<div/>
-<h1>Mike Boss</h1>
+<div class="container h-hs"/>
+<div class="sticky top-0 bg-white">
+    <h1 class="text-12xl text-center">Mike Boss</h1>
+</div>

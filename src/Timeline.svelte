@@ -1,46 +1,14 @@
 <script>
-    let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-    let events = [
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"}
-    ];
+    import Card from './Card.svelte';
+    import TitleDescription from './TitleDescription.svelte';
+
+    let courses = { title: 'Courses', courses: courses}
+    let springSemester = { type: 'semester', title: 'Spring Semester 2019', description: 'Best time of the year to not study!', startDate: '20.02.2019', endDate: '12.05.2019'}
+
 </script>
 
 <style></style>
 
-<ul id="timeline">
-    {#each events as event}
-        <li class="timeline_entry">{ event.name }</li>
-    {/each}
-</ul>
+<div>
+    <Card {...springSemester}/>
+</div>
