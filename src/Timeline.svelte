@@ -20,10 +20,6 @@
         { title: 'Some content title', description: 'Some content description', children: littlestChildren},
     ]
 
-<<<<<<< HEAD
-<style>
-</style>
-=======
     let children = [
         { title: 'Some content title', description: 'Some content description', children: littleChildren},
         { title: 'Some content title', description: 'Some content description', children: littleChildren},
@@ -53,15 +49,13 @@
         { title: 'Some content title', description: 'Some content description', children: children},
         { title: 'Some content title', description: 'Some content description', children: children},
     ];
-
 </script>
 
 <style></style>
->>>>>>> dbd9b5a15a8a3baa87adb763f52ce4633df126bc
 
-<div class="bg-gray-100 mx-64">
+<div class="mx-64">
     <div class="h-full"/>
-    <div class="ml-64 w-full overflow-scroll">
+    <div class="ml-64 w-full">
         {#each semesters as semester}
             <Card {...semester}/>
         {/each}
