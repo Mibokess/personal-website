@@ -4,6 +4,8 @@
 </script>
 
 <div>
+	<div class="h-screen-1/2"/>
 	<Title/>
+	<div class="h-screen-1/3"/>
 	<Timeline/>
 </div>

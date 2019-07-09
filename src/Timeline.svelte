@@ -54,6 +54,11 @@
 
 <style></style>
 
-{#each semesters as semester}
-    <Card {...semester}/>
-{/each}
+<div class="bg-gray-100 mx-64">
+    <div class="h-full"/>
+    <div class="ml-64 w-full overflow-scroll">
+        {#each semesters as semester}
+            <Card {...semester}/>
+        {/each}
+    </div>
+</div>
