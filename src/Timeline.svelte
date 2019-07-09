@@ -1,47 +1,69 @@
 <script>
-    let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-    let events = [
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"},
-        { name: "Some data"}
-    ];
-</script>
+    import Card from './Card.svelte';
 
+    let littlestChildren = [
+        { title: 'Some content title', description: 'Some content description' },
+        { title: 'Some content title', description: 'Some content description' },
+        { title: 'Some content title', description: 'Some content description' },
+        { title: 'Some content title', description: 'Some content description' },
+        { title: 'Some content title', description: 'Some content description' },
+        { title: 'Some content title', description: 'Some content description' },
+        { title: 'Some content title', description: 'Some content description' },
+    ]
+
+    let littleChildren = [
+        { title: 'Some content title', description: 'Some content description', children: littlestChildren},
+        { title: 'Some content title', description: 'Some content description', children: littlestChildren},
+        { title: 'Some content title', description: 'Some content description', children: littlestChildren},
+        { title: 'Some content title', description: 'Some content description', children: littlestChildren},
+        { title: 'Some content title', description: 'Some content description', children: littlestChildren},
+        { title: 'Some content title', description: 'Some content description', children: littlestChildren},
+    ]
+
+<<<<<<< HEAD
 <style>
 </style>
+=======
+    let children = [
+        { title: 'Some content title', description: 'Some content description', children: littleChildren},
+        { title: 'Some content title', description: 'Some content description', children: littleChildren},
+        { title: 'Some content titleSome content titleSome content titleSome content titleSome content title', description: 'Some content description', children: littleChildren},
+        { title: 'Some content title', description: 'Some content description', children: littleChildren},
+        { title: 'Some content title', description: 'Some content description', children: littleChildren},
+        { title: 'Some content title', description: 'Some content description', children: littleChildren},
+        { title: 'Some content title', description: 'Some content description', children: littleChildren},
+    ]
 
-<ul id="timeline">
-    {#each events as event}
-        <li class="timeline_entry">{ event.name }</li>
-    {/each}
-</ul>
+    let semesters = [
+        { title: 'Some content title', description: 'Some content description', children: children},
+        { title: 'Some content title', description: 'Some content description', children: children},
+        { title: 'Some content title', description: 'Some content description', children: children},
+        { title: 'Some content title', description: 'Some content description', children: children},
+        { title: 'Some content title', description: 'Some content description', children: children},
+        { title: 'Some content title', description: 'Some content description', children: children},
+        { title: 'Some content title', description: 'Some content description', children: children},
+        { title: 'Some content title', description: 'Some content description', children: children},
+        { title: 'Some content title', description: 'Some content description', children: children},
+        { title: 'Some content title', description: 'Some content description', children: children},
+        { title: 'Some content title', description: 'Some content description', children: children},
+        { title: 'Some content title', description: 'Some content description', children: children},
+        { title: 'Some content title', description: 'Some content description', children: children},
+        { title: 'Some content title', description: 'Some content description', children: children},
+        { title: 'Some content title', description: 'Some content description', children: children},
+        { title: 'Some content title', description: 'Some content description', children: children},
+        { title: 'Some content title', description: 'Some content description', children: children},
+    ];
+
+</script>
+
+<style></style>
+>>>>>>> dbd9b5a15a8a3baa87adb763f52ce4633df126bc
+
+<div class="bg-gray-100 mx-64">
+    <div class="h-full"/>
+    <div class="ml-64 w-full overflow-scroll">
+        {#each semesters as semester}
+            <Card {...semester}/>
+        {/each}
+    </div>
+</div>
