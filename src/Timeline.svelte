@@ -1,5 +1,5 @@
 <script>
-    import Card from './Card.svelte';
+    import Cards from './Cards.svelte';
 
     let littlestChildren = [
         { title: 'Some content title', description: 'Some content description' },
@@ -31,7 +31,7 @@
     ]
 
     let semesters = [
-        { title: 'Some content title', description: 'Some content description', children: children},
+        { title: 'Spring semester 2019', description: 'Some content description', children: children},
         { title: 'Some content title', description: 'Some content description', children: children},
         { title: 'Some content title', description: 'Some content description', children: children},
         { title: 'Some content title', description: 'Some content description', children: children},
@@ -51,13 +51,14 @@
     ];
 </script>
 
-<style></style>
+<style>
 
-<div class="mx-64">
-    <div class="h-full"/>
-    <div class="ml-64 w-full">
+</style>
+
+<div class="flex flex-row">
+    <div class="w-full">
         {#each semesters as semester}
-            <Card {...semester}/>
+            <Cards {...semester}/>
         {/each}
     </div>
 </div>

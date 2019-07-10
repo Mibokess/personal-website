@@ -1,11 +1,13 @@
 <script>
 	import Title from './Title.svelte';
 	import Timeline from './Timeline.svelte';
+	import Bar from './Bar.svelte';
 </script>
 
-<div>
-	<div class="h-screen-1/2"/>
-	<Title/>
-	<div class="h-screen-1/3"/>
-	<Timeline/>
+<div class="flex">
+	<Bar/>
+	<div class="pl-16">
+		<Title/>
+		<Timeline/>
+	</div>
 </div>

@@ -5,3 +5,11 @@
 @import 'tailwindcss/components';
 
 @import 'tailwindcss/utilities';
+
+.border-r-color-black {
+    border-right-color: black;
+}
+
+.border-r-width-4 {
+    border-right-width: 4px;
+}
