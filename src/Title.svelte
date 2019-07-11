@@ -1,11 +1,6 @@
-<script>
-</script>
-
-<style></style>
-
-<div class="z-10 h-1/2"/>
-<div class="z-10 sticky top-0">
-    <h1 class="bg-white text-12xl text-start">Mike Boss</h1>
-    <div class="h-32" style="background-image: linear-gradient(to top, transparent, white)"/>
+<div class="h-1/2"/>
+<div class="sticky top-0 h-1/4">
+    <h1 class="font-sans font-bold bg-white text-12xl text-start ml-4vw" >Mike Boss</h1>
+    <div class="h-4" style="background-image: linear-gradient(to top, transparent, white)"/>
 </div>
-<div class="h-1/6"/>
+<div class="h-1/4"/>
