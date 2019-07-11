@@ -4,87 +4,71 @@
     const startYear = 1998;
     const years = Array.from(Array(new Date().getFullYear() - startYear + 1), (x, index) => index + startYear).reverse();
 
-    let littlestChildren = [
-        { title: 'Some content title', description: 'Some content description' },
-        { title: 'Some content title', description: 'Some content description' },
-        { title: 'Some content title', description: 'Some content description' },
-        { title: 'Some content title', description: 'Some content description' },
-        { title: 'Some content title', description: 'Some content description' },
-        { title: 'Some content title', description: 'Some content description' },
-        { title: 'Some content title', description: 'Some content description' },
-    ]
-
-    let littleChildren = [
-        { title: 'Some content title', description: 'Some content description', children: littlestChildren},
-    ]
-
-    let children = [
-        { title: 'Some content title', description: 'Some content description', children: littleChildren},
-    ]
-
     let events = [
-        { title: 'Spring semester 2019', description: '6th semester', children: [
-            { title: 'Courses', description: '', children: [
-                { title: 'Introduction to machine learning', description: '', children: []},
-                { title: 'Information security', description: '', children: []},
-            ] },
+        { title: 'Spring Semester 2019', description: '6th Semester', children: [
+            { title: 'Introduction to machine learning', description: '8 credit points', children: [] },
+            { title: 'Information security', description: '8 credit points', children: [] },
+            { title: 'Bachelor Thesis', description: '10 credit points', children: [] }
         ], year: 2019},
-        { title: 'Autumn semester 2018', description: '5th semester', children: [
-            { title: 'Courses', description: '', children: [
-                { title: 'Computer systems', description: '', children: []},
-                { title: 'Algorithms, probability and computing', description: '', children: []},
-                { title: 'Visual computing', description: '', children: []},
-                { title: 'Software Engineering Seminar', description: '', children: []},
-                { title: 'Diskrete Ereignissysteme', description: '', children: []},
-                { title: 'Japanese A1.1', description: '', children: []},
-            ] },
-        ], year: 2018},
-        { title: 'Spring semester 2018', description: '4th semester', children: [
-            { title: 'Courses', description: '', children: [
-                { title: 'Computer Networks', description: '', children: []},
-                { title: 'Formal methods and functional programming', description: '', children: []},
-                { title: 'Databases and data modeling', description: '', children: []},
-                { title: 'Wahrscheinlichkeit und Statistik', description: '', children: []},
-                { title: 'Information retrieval', description: '', children: []},
-                { title: 'Introduction to game theory', description: '', children: []},
+        { title: 'Autumn Semester 2018', description: '5th Semester & teaching assistant', children: [
+            { title: 'Computer systems', description: '8 credit points', children: [] },
+            { title: 'Algorithms, probability and computing', description: '8 credit points', children: [] },
+            { title: 'Visual computing', description: '8 credit points', children: [] },
+            { title: 'Software Engineering Seminar', description: '2 credit points', children: [] },
+            { title: 'Diskrete Ereignissysteme', description: '5 credit points', children: [] },
+            { title: 'Japanese A1.1', description: '3 credit points', children: [] },
+            { title: 'Teaching Assistant', description: 'Einführung in die Programmierung', children: [
+                { title: '', description: 'Supervision of a group of first Semester students in coordination with a second assistant for the subject "Introduction to Programming" during the autumn Semester. Tasks included the explaining of unclear material, exercises and the correction thereof including feedback.', children: []}
+            ]},
+        ], year: 2018 },
+        { title: 'Cerebral Zürich Camp', description: 'Civil service - 2 weeks', children: [
+            { title: '', description: 'One-to-one care for two disabled holiday guests in Cerebral Zürich Summer camp, one week each. The care included everything from morning to evening.', children: []},
+        ], year: 2018 },
+        { title: 'Spring Semester 2018', description: '4th Semester & teaching assistant', children: [
+            { title: 'Computer Networks', description: '7 credit points', children: [] },
+            { title: 'Formal methods and functional programming', description: '7 credit points', children: [] },
+            { title: 'Databases and data modeling', description: '7 credit points', children: [] },
+            { title: 'Wahrscheinlichkeit und Statistik', description: '5 credit points', children: [] },
+            { title: 'Information retrieval', description: '4 credit points', children: [] },
+            { title: 'Introduction to game theory', description: '3 credit points', children: [] },
+            { title: 'Teaching Assistant', description: 'Parallel Programming', children: [
+                { title: '', description: 'Supervision of a group of students (15 to 20) in their second Semester for the subject «Parallel Programming». Attendance of the didactic training course for teaching assistants.', children: [] }
             ]},
         ], year: 2018},
-        { title: 'Autumn semester 2017', description: '3th semester', children: [
-            { title: 'Courses', description: '', children: [
-                { title: 'Analysis 2', description: '', children: []},
-                { title: 'Systems Programming and Computer Architecture', description: '', children: []},
-                { title: 'Numerical Methods for CSE', description: '', children: []},
-                { title: 'Theoretische Informatik', description: '', children: []},
-                { title: 'Human Computer Interaction', description: '', children: []},
-            ] },
+        { title: 'Autumn Semester 2017', description: '3th Semester', children: [
+            { title: 'Systems Programming and Computer Architecture', description: '7 credit points', children: [] },
+            { title: 'Numerical Methods for CSE', description: '7 credit points', children: [] },
+            { title: 'Theoretische Informatik', description: '7 credit points', children: [] },
+            { title: 'Analysis 2', description: '5 credit points', children: [] },
+            { title: 'Human Computer Interaction', description: '3 credit points', children: [] },
         ], year: 2017},
-        { title: 'Spring semester 2017', description: '2th semester', children: [
-            { title: 'Courses', description: '', children: [
-                { title: 'Analysis 1', description: '', children: []},
-                { title: 'Algorithem und Wahrscheinlichkeit', description: '', children: []},
-                { title: 'Parallel Programming', description: '', children: []},
-                { title: 'Design of Digital Circuits', description: '', children: []},
-            ]},
+        { title: 'Spring Semester 2017', description: '2th Semester', children: [
+            { title: 'Analysis 1', description: '7 credit points', children: [] },
+            { title: 'Algorithmen und Wahrscheinlichkeit', description: '7 credit points', children: [] },
+            { title: 'Parallel Programming', description: '7 credit points', children: [] },
+            { title: 'Design of Digital Circuits', description: '7 credit points', children: [] },
         ], year: 2017},
-        { title: 'Autumn semester 2016', description: '1th semester', children: [
-            { title: 'Courses', description: '', children: [
-                { title: 'Diskrete Mathematik', description: '', children: []},
-                { title: 'Lineare Algebra', description: '', children: []},
-                { title: 'Einführung in die Programmierung', description: '', children: []},
-                { title: 'Algorithmen und Datenstrukturen', description: '', children: []},
-            ] },
+        { title: 'Autumn Semester 2016', description: '1th Semester', children: [
+            { title: 'Diskrete Mathematik', description: '7 credit points', children: [] },
+            { title: 'Lineare Algebra', description: '7 credit points', children: [] },
+            { title: 'Einführung in die Programmierung', description: '7 credit points', children: [] },
+            { title: 'Algorithmen und Datenstrukturen', description: '7 credit points', children: [] },
         ], year: 2016},
+        { title: 'SIX GROUP Stamford', description: 'Internship - 3 weeks', children: [
+            { title: '', description: 'Largely a learning experience exploring the activities of the IT department as well as its interactions with other departments as well as additional administrative tasks in the IT area.', children: [] },
+        ], year: 2015 },
+        { title: 'Beginning of Existence', description: 'The simultation had not yet begun; only after the godly words were spoken "Deploy it already, it`s friday afternoon!" there was light!', children: [], year: 1998 }
     ];
 </script>
 
-<div class="flex flex-col h-full">
+<div class="flex flex-col">
     {#each years as year}
-        <div class="flex flex-row w-full my-2">
-            <div class="relative w-16">
-                <div class="absolute -left-1.05vh z-30 bg-white border-black border-2 mt-1 h-5 w-4 rounded-full"/>
-                <span class="absolute -left-6vh text-gray-900">{year}</span>
+        <div class="flex flex-row w-full my-20">
+            <div class="relative">
+                <div class="absolute right-0.03vw bg-white border-black border-2 mt-1 h-5 w-4 rounded-full"/>
+                <span class="absolute right-2.4vw font-semibold text-gray-600">{ year }</span>
             </div>
-            <div class="w-full my-8">
+            <div class="w-full overflow-auto">
                 {#each events as event}
                     {#if (event.year === year)}
                         <Cards {...event}/>

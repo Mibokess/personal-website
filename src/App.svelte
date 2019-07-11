@@ -6,8 +6,11 @@
 
 <div>
 	<div class="flex flex-row h-full w-full">
-		<Bar/>
-		<div class="w-9/12">
+		<div class="flex-none w-1/4"/>
+		<div class="flex-none flex flex-row w-4">
+			<Bar/>
+		</div>
+		<div class="flex-none w-3/4">
 			<Title/>
 			<Timeline/>
 		</div>

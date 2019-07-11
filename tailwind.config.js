@@ -1,8 +1,13 @@
 module.exports = {
   theme: {
     extend: {
+      boxShadow: {
+        'outline-gray': '0 0 0 3px rgba(200, 200, 200, 0.1)'
+      },
       fontSize: {
+        '7xl': '6rem',
         '12xl': '10rem',
+        '10vw': '10vw',
       },
       minHeight: {
         '1/3': '33vh',
@@ -23,11 +28,24 @@ module.exports = {
         '22vw': '22vw',
         '21vw': '21vw',
         '18vw': '18vw',
+        '1/4': '25vw',
       },
       inset: {
-        '-1.05vh': '-1.05vh',
-        '-6vh': '-6vh',
-      }
+        '0.3vh': '0.3vh',
+        '0.03vw': '0.03vw',
+        '1vw': '1vw',
+        '3vh': '3vh',
+        '2vw': '2vw',
+        '2.4vw': '2.4vw',
+        '1/2': '50%',
+      },
+      border: {
+        left: {
+          color: {
+            'green': 'green',
+          }
+        }
+      },
     }
   }
 }

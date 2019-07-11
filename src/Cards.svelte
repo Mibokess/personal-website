@@ -6,12 +6,26 @@
     let childrenVisible = false;
 </script>
 
+<style>
+    .triangle {
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0 10px 10px;
+        border-color: transparent transparent rgb(228, 228, 228) transparent;
+    }
+</style>
+
 <div class="flex flex-row items-start"> 
-    <div class="flex-none max-w-xs m-4 p-6 bg-black rounded-lg" on:click="{e => childrenVisible = !childrenVisible}">
+    <div class="relative flex-none max-w-sm m-4 p-6 bg-white rounded-lg shadow hover:shadow-md" on:click="{e => childrenVisible = !childrenVisible}">
         <div class="ml-6 pt-1">
-            <h4 class="font-sans text-xl text-start text-gray-100 leading-tight">{ title }</h4>
-            <p class="font-sans text-base text-start text-gray-400 leading-normal">{ description }</p>
+            <h4 class="font-sans text-xl text-start text-gray-900 leading-tight">{ title }</h4>
+            <p class="font-sans text-base text-start text-gray-600 leading-normal">{ description }</p>
         </div>
+        {#if children.length > 0}
+            <div class="absolute bottom-0 right-0 triangle"/>
+        {/if}
     </div>
     {#if children.length > 0 && childrenVisible}
         <div class="flex flex-col items-start">
