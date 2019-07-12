@@ -1,4 +1,6 @@
 <script>
+    import { fly } from 'svelte/transition';      
+
     export let title;
     export let description;
     export let children;
@@ -17,8 +19,8 @@
     }
 </style>
 
-<div class="flex flex-row items-start"> 
-    <div class="relative flex-none max-w-sm m-4 p-6 bg-white rounded-lg shadow hover:shadow-md" on:click="{e => childrenVisible = !childrenVisible}">
+<div class="animate:flip flex flex-row items-start"> 
+    <div class="relative flex-none max-w-sm m-4 p-6 bg-white rounded-lg shadow hover:shadow-md" transition:fly="{{ x: -25, duration: 1000}}" on:click="{e => childrenVisible = !childrenVisible}">
         <div class="ml-6 pt-1">
             <h4 class="font-sans text-xl text-start text-gray-900 leading-tight">{ title }</h4>
             <p class="font-sans text-base text-start text-gray-600 leading-normal">{ description }</p>
