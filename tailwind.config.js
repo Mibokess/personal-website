@@ -1,6 +1,9 @@
 module.exports = {
   theme: {
     extend: {
+      maxWidth: {
+        'xxs': '15rem',
+      },
       boxShadow: {
         'outline-gray': '0 0 0 3px rgba(200, 200, 200, 0.1)'
       },
