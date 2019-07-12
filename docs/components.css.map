@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "file": "components.css",
+  "sources": [
+    "..\\src\\Cards.svelte"
+  ],
+  "sourcesContent": [
+    "<script>\r\n    import { fly } from 'svelte/transition';      \r\n\r\n    export let title;\r\n    export let description;\r\n    export let children;\r\n    \r\n    let childrenVisible = false;\r\n</script>\r\n\r\n<style>.triangle {\n  display: block;\n  width: 0;\n  height: 0;\n  border-style: solid;\n  border-width: 0 0 10px 10px;\n  border-color: transparent transparent rgb(228, 228, 228) transparent;\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9DYXJkcy5zdmVsdGUiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQ0k7RUFDSSxjQUFjO0VBQ2QsUUFBUTtFQUNSLFNBQVM7RUFDVCxtQkFBbUI7RUFDbkIsMkJBQTJCO0VBQzNCLG9FQUFvRTtBQUN4RSIsImZpbGUiOiJzcmMvQ2FyZHMuc3ZlbHRlIiwic291cmNlc0NvbnRlbnQiOlsiXHJcbiAgICAudHJpYW5nbGUge1xyXG4gICAgICAgIGRpc3BsYXk6IGJsb2NrO1xyXG4gICAgICAgIHdpZHRoOiAwO1xyXG4gICAgICAgIGhlaWdodDogMDtcclxuICAgICAgICBib3JkZXItc3R5bGU6IHNvbGlkO1xyXG4gICAgICAgIGJvcmRlci13aWR0aDogMCAwIDEwcHggMTBweDtcclxuICAgICAgICBib3JkZXItY29sb3I6IHRyYW5zcGFyZW50IHRyYW5zcGFyZW50IHJnYigyMjgsIDIyOCwgMjI4KSB0cmFuc3BhcmVudDtcclxuICAgIH1cclxuIl19 */</style>\r\n\r\n<div class=\"animate:flip flex flex-row items-start\"> \r\n    <div class=\"relative flex-none max-w-sm m-4 p-6 bg-white rounded-lg shadow hover:shadow-md\" transition:fly=\"{{ x: -25, duration: 1000}}\" on:click=\"{e => childrenVisible = !childrenVisible}\">\r\n        <div class=\"ml-6 pt-1\">\r\n            <h4 class=\"font-sans text-xl text-start text-gray-900 leading-tight\">{ title }</h4>\r\n            <p class=\"font-sans text-base text-start text-gray-600 leading-normal\">{ description }</p>\r\n        </div>\r\n        {#if children.length > 0}\r\n            <div class=\"absolute bottom-0 right-0 triangle\"/>\r\n        {/if}\r\n    </div>\r\n    {#if children.length > 0 && childrenVisible}\r\n        <div class=\"flex flex-col items-start\">\r\n            {#each children as child}\r\n                <svelte:self {...child}/>\r\n            {/each}\r\n        </div>\r\n    {/if}\r\n</div>"
+  ],
+  "names": [],
+  "mappings": "AAUO,SAAS,eAAC,CAAC,AAChB,OAAO,CAAE,KAAK,CACd,KAAK,CAAE,CAAC,CACR,MAAM,CAAE,CAAC,CACT,YAAY,CAAE,KAAK,CACnB,YAAY,CAAE,CAAC,CAAC,CAAC,CAAC,IAAI,CAAC,IAAI,CAC3B,YAAY,CAAE,WAAW,CAAC,WAAW,CAAC,IAAI,GAAG,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,CAAC,WAAW,AACtE,CAAC"
+}
